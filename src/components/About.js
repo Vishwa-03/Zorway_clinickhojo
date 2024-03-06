@@ -9,7 +9,7 @@ const About = () => {
   return (
     <div
       id="AboutUs"
-      className="w-full overflow-y-hidden  relative lg:mt-[4rem] h-[113rem] mb-10  lg:h-[754px] overflow-hidden md:h-[600px] md:mt-[4rem]  "
+      className="w-full overflow-y-hidden  relative lg:mt-[4rem] h-[113rem] mb-10  lg:h-[113rem] overflow-hidden md:h-[80rem] md:mt-[4rem] md:bg-[#E1E0E0]  lg:bg-[#E1E0E0] "
     >
       <div className="z-100  absolute    flex flex-row w-full   justify-evenly">
         <div className="flex flex-col lg:bg-inherit  items-start">
@@ -44,7 +44,16 @@ const About = () => {
                 convenience of Clinic Khojo and take control of your health
                 journey
               </p>
-              <div className="bg-white -ml-[4.4rem] xl:-ml-[6rem] lg:-ml-[1.8rem] mt-8 lg:mt-[10rem] w-[364px] h-[60px] rounded-r-full items-center">
+              <div className="flex bg-[#FA0808] items-center gap-[10px] hover:scale-105 transition-all cursor-pointer duration-300 h-[46px] w-[169px] mt-3 lg:mt-0   rounded-[8px] py-[8px] px-[12px] justify-between drop-shadow-md">
+                <button className=" font-poppins text-[20px]  text-white">
+                  <Link to="#Contact" smooth>
+                    {" "}
+                    Contact us{" "}
+                  </Link>
+                </button>
+                <MdPermContactCalendar color="white" size={24} />
+              </div>
+              <div  className="bg-white -ml-[4.5rem] xl:-ml-[12rem] lg:-ml-[8rem] mt-8 lg:mt-[3rem] w-[364px] h-[60px] rounded-r-full items-center">
                 <div className="flex flex-row-reverse lg:mr-[2rem] mr-[2rem] items-end text-[#0529BB] font-medium  ">
                   <p className=" font-poppins text-[34px]">
                     Benefits to doctor
@@ -63,7 +72,7 @@ const About = () => {
                 doctors to enhance their practice and contribute to improving
                 healthcare accessibility.
               </p>
-              <div className="bg-white -ml-[4rem] xl:-ml-[6rem] lg:-ml-[1.8rem] mt-8 lg:mt-[10rem] w-[364px] h-[60px] rounded-r-full">
+              <div className="bg-white -ml-[4rem] xl:-ml-[12rem] lg:-ml-[8rem] mt-8 lg:mt-[3rem] w-[364px] h-[60px] rounded-r-full">
                 <div className="flex flex-row-reverse lg:mr-[2rem] mr-[2rem] items-end text-[#0529BB] font-medium ">
                   <p className=" font-poppins text-[34px]">
                     Benefits to patient
@@ -83,11 +92,12 @@ const About = () => {
                 treatment plans.
               </p>
 
-              <div className="bg-white -ml-[8rem] xl:-ml-[6rem] lg:-ml-[1.8rem] mt-8 lg:mt-[10rem] w-[364px] h-[60px] rounded-r-full">
+              <div id="" className="bg-white -ml-[8rem] xl:-ml-[12rem] lg:-ml-[8rem] mt-8 lg:mt-[3rem] w-[364px] h-[60px] rounded-r-full">
                 <div className="flex flex-row-reverse lg:mr-[2rem] mr-[2rem] items-end text-[#0529BB] font-medium ">
                   <p className=" font-poppins text-[38px]">Careers</p>
                 </div>
               </div>
+              
               <p className="text-justify text-[#3b3a3b] w-full  mt-10 font-poppins  leading-[20.6px] lg:leading-[25px] text-[12.5px] lg:text-[16px]  md:text-[16px] sm:text-[16px]">
                 Join Clinic Khojo for an opportunity to be part of a dynamic
                 team reshaping healthcare accessibility. We offer exciting
@@ -95,19 +105,11 @@ const About = () => {
                 skills can make a real difference in people's lives. Whether
                 you're tech-savvy, a healthcare professional, or a marketing
                 enthusiast, Clinic Khojo welcomes passionate individuals ready
-                to innovate and drive positive change. Send your CV at
-                hr@clinickhojo.com
+                to innovate and drive positive change.<span className="text-[#FA0808]">Send your CV at
+                hr@clinickhojo.com</span> 
               </p>
 
-              <div className="flex bg-[#FA0808] items-center gap-[10px] hover:scale-105 transition-all cursor-pointer duration-300 h-[46px] w-[169px] mt-6 lg:mt-0   rounded-[8px] py-[8px] px-[12px] justify-between drop-shadow-md">
-                <button className=" font-poppins text-[20px]  text-white">
-                  <Link to="#Contact" smooth>
-                    {" "}
-                    Contact us{" "}
-                  </Link>
-                </button>
-                <MdPermContactCalendar color="white" size={24} />
-              </div>
+              
               {/* <img
             className="h-[15rem] absolute right-[30%] top-0  "
             src={prescriptionImage}

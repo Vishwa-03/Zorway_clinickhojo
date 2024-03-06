@@ -1,7 +1,9 @@
 import { useState } from "react";
 import Logo from "../assests/Logo.png";
+import Tm from "../assests/TM.png";
 import { MdDownload, MdPermContactCalendar } from "react-icons/md";
 import { HashLink as Link } from "react-router-hash-link";
+import { PiTrademark } from "react-icons/pi";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,20 +13,27 @@ const Navbar = () => {
   };
 
   return (
-    <div >
+    <div>
       <div className=" hidden lg:flex xl:w-[1200px] lg:w-[1000.66px] sm:w-[600px] mx-auto  lg:flex-row rounded-lg lg:gap-[5rem] xl:gap-[8rem] bg-white h-[5.5rem] lg:h-[4.5rem] mt-[3rem] px-[1.25rem] py-[1.25rem] items-center md:flex md:w-[750px] md:h-[4.3rem] md:flex-row md:items-center md:gap-[2rem] sm:flex sm:px-1 sm:h-[4rem] sm:flex-row sm:items-center sm:gap-x-2  ">
         {/* Logo */}
-        <div className="flex items-center justify-center mb-4 lg:mb-0 md:mb-0 sm:mb-0 xl:mb-0">
+        <div className="  relative flex items-center justify-center mb-4 lg:mb-0 md:mb-0 sm:mb-0 xl:mb-0">
           <img
             src={Logo}
             className="lg:w-[170.66px] lg:h-[130px] md:w-[170.66px]  sm:w-[190px]   sm:mt-3 h-[100px] mt-0 w-[100px]  lg:mt-3  "
             alt="Logo"
           />
+          <PiTrademark
+            className="absolute -right-[6px] top-[25%] "
+            color="#0529BB"
+            size={24}
+          />
         </div>
 
         {/* Main navbar */}
-        <div className="flex flex-col lg:flex-row md:flex-row sm:flex-row sm:gap-x-3 md:gap-x-10
-         w-full lg:w-[100%] ">
+        <div
+          className="flex flex-col lg:flex-row md:flex-row sm:flex-row sm:gap-x-3 md:gap-x-10
+         w-full lg:w-[100%] "
+        >
           <ul className="flex items-center text-[#535252] xl:gap-[38px] sm:gap-x-[15px]  md:mb-0 lg:gap-[28px] md:gap-x-3 mb-4 sm:mb-0 lg:mb-0">
             {/* Menu items */}
             <li className="hover:text-[#FF0B0B] cursor-pointer group weight text-[20px] font-poppins transition-all duration-200 mb-2 md:mb-0   md:text-[18px] sm:text-[17.5px] lg:mb-0">
@@ -73,9 +82,19 @@ const Navbar = () => {
 
       <nav class="bg-white  lg:hidden md:hidden sm:hidden h-[4.5rem]  border-gray-200 ">
         <div class="flex h-[100px]   justify-between items-center mx-auto max-w-screen-xl p-1">
-          <a href="" class="flex items-center -space-x-[4px] rtl:space-x-reverse">
-            <img src={Logo} className=" w-[140px] -mt-2 " alt="Flowbite Logo" />
-          </a>
+          <div className=" relative">
+            <a
+              href=""
+              class="flex items-center -space-x-[4px] rtl:space-x-reverse"
+            >
+              <img
+                src={Logo}
+                className=" w-[140px] -mt-2 "
+                alt="Flowbite Logo"
+              />
+            </a>
+            <PiTrademark className=" absolute top-5 right-1" color="#0529BB" size={21}/>
+          </div>
           <div class="flex items-center space-x-6 rtl:space-x-reverse">
             <div className="flex -mt-6  bg-[#FA0808] items-center w-full lg:w-[200px] hover:scale-105 transition-all cursor-pointer duration-300 rounded-[8px] py-[8px] px-[7px]">
               <button className="font-poppins text-[14px] text-white">
@@ -126,8 +145,10 @@ const Navbar = () => {
                 </a>
               </li>
             </ul>
-            <div className="flex -mr-4 bg-white items-center border-2 w-[88px] rounded-lg gap-[5px] border-red-500 
-             px-[1px] hover:scale-105 transition-all duration-300 cursor-pointer py-[8px]">
+            <div
+              className="flex -mr-4 bg-white items-center border-2 w-[88px] rounded-lg gap-[5px] border-red-500 
+             px-[1px] hover:scale-105 transition-all duration-300 cursor-pointer py-[8px]"
+            >
               <button className="text-[#FA0808] text-[12px] font-poppins">
                 <Link to="#Contact" smooth>
                   Contact us

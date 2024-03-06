@@ -52,9 +52,9 @@ const ContactUs = () => {
                   </div>
                   <div className="flex items-center justify-evenly  font-poppins w-[16.5rem]">
                     <MdEmail color="#535252" size={20} />
-                    
+
                     <p className="text-[1.2rem]  text-[#535252]">
-                     support@clinickhojo.com
+                      support@clinickhojo.com
                     </p>
                   </div>
                   <div className="flex  items-center  justify-evenly  font-poppins w-[14rem]">
@@ -63,6 +63,7 @@ const ContactUs = () => {
                       color="#535252"
                       size={35}
                     />
+
                     <p className=" ml-[8px] text-[1.2rem] text-[#535252]">
                       Begusarai 851101,Bihar, India
                     </p>
@@ -70,21 +71,27 @@ const ContactUs = () => {
                 </div>
                 {/* social links */}
                 <div className="flex -mt-7 lg:-mt-10 py-10 gap-x-6 items-center justify-center">
-                  <FaFacebook
-                    className="lg:hover:scale-110 transition-all duration-200 lg:cursor-pointer"
-                    color="red"
-                    size={30}
-                  />
-                  <FaInstagram
-                    className="lg:hover:scale-110 transition-all duration-200 lg:cursor-pointer"
-                    color="red"
-                    size={30}
-                  />
-                  <IoLogoLinkedin
-                    className="lg:hover:scale-110 transition-all duration-200 lg:cursor-pointer"
-                    color="red"
-                    size={30}
-                  />
+                  <a href="https://www.facebook.com/Indianews36official?mibextid=ZbWKwL">
+                    <FaFacebook
+                      className="lg:hover:scale-110 transition-all duration-200 lg:cursor-pointer"
+                      color="red"
+                      size={30}
+                    />
+                  </a>
+                  <a href="https://www.instagram.com/clinickhojo?igsh=ZzBrc3RjMmZnbXA1">
+                    <FaInstagram
+                      className="lg:hover:scale-110 transition-all duration-200 lg:cursor-pointer"
+                      color="red"
+                      size={30}
+                    />
+                  </a>
+                  <a href="https://www.linkedin.com/in/clinic-khojo-10a08b2b9/">
+                    <IoLogoLinkedin
+                      className="lg:hover:scale-110 transition-all duration-200 lg:cursor-pointer"
+                      color="red"
+                      size={30}
+                    />
+                  </a>
                   <IoLogoWhatsapp
                     className="lg:hover:scale-110 transition-all duration-200 lg:cursor-pointer"
                     color="red"
