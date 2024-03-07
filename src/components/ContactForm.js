@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { MdOutlinePersonOutline } from "react-icons/md";
 import { MdLocalPhone, MdMessage } from "react-icons/md";
 import { RxEnvelopeClosed } from "react-icons/rx";
+import { send } from "emailjs-com";
+import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
   const [FormData, setFormData] = useState({
@@ -11,12 +13,25 @@ const ContactForm = () => {
     phoneNumber: "",
     message: "",
   });
+  const form = useRef();
 
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log(FormData);
+
+    emailjs
+      .sendForm("service_jtrsj2s", "template_i0t3wdi", form.current, {
+        publicKey: "zyMP-ltTGxM0l4Cur",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
   };
+
   const changeHandler = (event) => {
     setFormData((prevData) => ({
       ...prevData,
@@ -25,10 +40,13 @@ const ContactForm = () => {
   };
   console.log(FormData);
   return (
-    <div id="Contact" className="w-[335px]  overflow-hidden h-[330px] mx-auto mt-8 p-6rounded-md bg-transparent  ">
-      <form className="" onSubmit={handleSubmit}>
+    <div
+      id="Contact"
+      className="w-[335px]  overflow-hidden h-[480px] mx-auto mt-8 p-6rounded-md bg-transparent  "
+    >
+      <form ref={form} className="" onSubmit={sendEmail}>
         <div className="mb-4 z-10 relative ">
-          <div className=" absolute top-[23%]">
+          <div className=" absolute top-[23%] ">
             {FormData.name === "" ? (
               <div className="  px-2 flex gap-x-[2rem] items-center">
                 <MdOutlinePersonOutline size={24} />
@@ -43,13 +61,14 @@ const ContactForm = () => {
 
           <input
             type="text"
-            className=" opacity-25 bg-white py-[.90rem] h-[44px]  drop-shadow-md px-[.65rem] w-full border rounded-md"
+            required
+            className="  bg-white  bg-opacity-25  text-black text-opacity-75 py-[.90rem] h-[44px]  drop-shadow-md px-[.65rem] w-full border rounded-md"
             value={FormData.name}
             name="name"
             onChange={changeHandler}
           />
         </div>
-       
+
         <div className="mb-4 relative">
           <div className=" absolute top-[23%]">
             {FormData.email === "" ? (
@@ -65,7 +84,8 @@ const ContactForm = () => {
           </div>
           <input
             type="email"
-            className=" opacity-25 bg-white py-[.90rem] h-[44px]  drop-shadow-md px-[.65rem] w-full border rounded-md"
+            required
+            className=" bg-white  bg-opacity-25  text-black text-opacity-75 py-[.90rem] h-[44px]  drop-shadow-md px-[.65rem] w-full border rounded-md"
             value={FormData.email}
             name="email"
             onChange={changeHandler}
@@ -86,7 +106,8 @@ const ContactForm = () => {
           </div>
           <input
             type="tel"
-            className=" opacity-25 bg-white py-[.90rem] h-[44px]  drop-shadow-md px-[.65rem] w-full border rounded-md"
+            required
+            className=" bg-white  bg-opacity-25  text-black text-opacity-75 py-[.90rem] h-[44px]  drop-shadow-md px-[.65rem] w-full border rounded-md"
             value={FormData.phoneNumber}
             name="phoneNumber"
             onChange={changeHandler}
@@ -103,8 +124,9 @@ const ContactForm = () => {
               <input
                 type="radio"
                 value="yes"
+                required
                 // checked={FormData.isDoctor}
-                 className=" cursor-pointer"
+                className=" cursor-pointer"
                 name="isDoctor"
                 color="#535252"
                 onChange={changeHandler}
@@ -115,7 +137,8 @@ const ContactForm = () => {
               <input
                 type="radio"
                 value="no"
-                // checked={!FormData.isDoctor} 
+                // checked={!FormData.isDoctor}
+                required
                 className="  cursor-pointer"
                 color="#535252"
                 onChange={changeHandler}
@@ -126,12 +149,12 @@ const ContactForm = () => {
           </div>
         </div>
         <div className="mb-4 z-10 relative ">
-          <div className=" absolute top-[23%]">
+          <div className=" absolute top-[10%] ">
             {FormData.message === "" ? (
               <div className="  px-2 flex gap-x-[2rem] items-center">
                 <MdMessage size={24} />
                 <span className=" font-poppins text-[#535252] text-[12px] font-semibold">
-                  Message{" "}
+                 Write us a message{" "}
                 </span>
               </div>
             ) : (
@@ -143,9 +166,10 @@ const ContactForm = () => {
             Full name
           </span> */}
 
-          <input
-            type="text"
-            className=" opacity-25 bg-white py-[.90rem] h-[44px]  drop-shadow-md px-[.65rem] w-full border rounded-md"
+          <textarea
+            rows="9" cols="80"
+            required
+            className=" bg-white   bg-opacity-25 text-black text-opacity-75 py-[.20rem] h-[164px]  drop-shadow-md px-[.65rem] w-full border rounded-md"
             value={FormData.message}
             name="message"
             onChange={changeHandler}
@@ -154,6 +178,7 @@ const ContactForm = () => {
         <div className="mt-4   ">
           <button
             type="submit"
+            value="Send"
             className="bg-[#229649] drop-shadow-lg mb-[4rem] text-white py-2 px-4 rounded-md hover:scale-105 transition-all duration-300"
           >
             Submit

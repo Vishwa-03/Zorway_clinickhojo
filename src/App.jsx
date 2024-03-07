@@ -8,6 +8,7 @@ import About from "./components/About";
 import Download from "./components/Download";
 import ContactUs from "./components/Contact";
 import Footer from "./components/Footer";
+import AboutUs2 from "./components/AboutUs2";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <HeroSection />
       <TopDeals/>
       <About/>
+      
       <Download/>
       <ContactUs/>
       <Footer/>

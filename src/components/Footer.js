@@ -7,6 +7,7 @@ import zorway from "../assests/zorway.png";
 import wheelchair from "../assests/wheelchair.png";
 import { PiTrademark } from "react-icons/pi";
 import { FaRegCopyright } from "react-icons/fa";
+import { HashLink as Link } from "react-router-hash-link";
 
 const Footer = () => {
   const [message, setMessage] = useState("");
@@ -55,34 +56,45 @@ const Footer = () => {
           <div className="  lg:hidden xl:hidden sm:flex sm:flex-row md:flex md:flex-row justify-between w-[100%] sm:ml-10 ">
             <div className="flex flex-col   lg:w-[30%] md:w-[50%] my-2 lg:my-0   items-center text-white font-poppins">
               <div className="flex flex-row gap-x-16 lg:w-[30%] md:w-[50%] my-2 lg:my-0 justify-evenly text-white font-poppins  ">
-
-              <div className="  ">
-                <p className="cursor-pointer opacity-80  hover:opacity-100">
-                  Home
-                </p>
-                <p className="cursor-pointer opacity-80  hover:opacity-100">
-                  About Us
-                </p>
-                <p className="cursor-pointer opacity-80  hover:opacity-100">
-                  Contact Us
-                </p>
-              </div>
-              <div className="">
-                <p className="cursor-pointer opacity-80  hover:opacity-100">
-                  Careers
-                </p>
-                <p className="cursor-pointer opacity-80  hover:opacity-100">
-                  Blogs
-                </p>
-              </div>
+                <div className="  ">
+                  <Link to="#" smooth>
+                    <p className="cursor-pointer opacity-80  hover:opacity-100">
+                      Home
+                    </p>
+                  </Link>
+                  <Link to="#Contact" smooth>
+                    <p className="cursor-pointer opacity-80  hover:opacity-100">
+                      Contact Us
+                    </p>
+                  </Link>
+                  <Link to="#AboutUs" smooth>
+                    <p className="cursor-pointer opacity-80  hover:opacity-100">
+                      About Us
+                    </p>
+                  </Link>
+                </div>
+                <div className="">
+                  <Link to="#Careers" smooth>
+                    <p className="cursor-pointer opacity-80  hover:opacity-100">
+                      Careers
+                    </p>
+                  </Link>
+                  <p className="cursor-pointer opacity-80  hover:opacity-100">
+                    Blogs
+                  </p>
+                </div>
               </div>
               <div className=" flex flex-row gap-x-8 lg:hidden md:hidden sm:hidden">
-                <p className="cursor-pointer opacity-80  hover:opacity-100">
-                  Terms of service
-                </p>
-                <p className="cursor-pointer opacity-80  hover:opacity-100">
-                  Privacy Policy
-                </p>
+                <a href="https://drive.google.com/file/d/1B39WDvGohMvVnwn_eZbBKrz9jtWD7adT/view?usp=sharing">
+                  <p className="cursor-pointer opacity-80  hover:opacity-100">
+                    Terms of service
+                  </p>
+                </a>
+                <a href="https://drive.google.com/file/d/1zoNsY3xqhBV3FKygQZKY6CzlW5GgP5l9/view?usp=sharing">
+                  <p className="cursor-pointer opacity-80  hover:opacity-100">
+                    Privacy Policy
+                  </p>
+                </a>
               </div>
             </div>
             <div className="flex flex-col gap-y-2  w-[260px] md:w-[260px] lg:w-[260px] sm:w-[260px] lg:ml-10 mt-4  md:ml-0 mr-10 ml-6 relative items-center cursor-pointer h-[44px] rounded-lg">
@@ -116,20 +128,28 @@ const Footer = () => {
 
           <div className="hidden md:hidden sm:hidden lg:w-[30%] lg:flex xl:flex 2xl:flex md:w-[50%] my-2 lg:my-0 justify-evenly text-white font-poppins">
             <div className="  ">
-              <p className="cursor-pointer opacity-80  hover:opacity-100">
-                Home
-              </p>
-              <p className="cursor-pointer opacity-80  hover:opacity-100">
-                About Us
-              </p>
-              <p className="cursor-pointer opacity-80  hover:opacity-100">
-                Contact Us
-              </p>
+              <Link to="#" smooth>
+                <p className="cursor-pointer opacity-80  hover:opacity-100">
+                  Home
+                </p>
+              </Link>
+              <Link to="#AboutUs" smooth>
+                <p className="cursor-pointer opacity-80  hover:opacity-100">
+                  About Us
+                </p>
+              </Link>
+              <Link to="#ContactUs" smooth>
+                <p className="cursor-pointer opacity-80  hover:opacity-100">
+                  Contact Us
+                </p>
+              </Link>
             </div>
             <div className="">
-              <p className="cursor-pointer opacity-80  hover:opacity-100">
-                Careers
-              </p>
+              <Link to="#Careers" smooth>
+                <p className="cursor-pointer opacity-80  hover:opacity-100">
+                  Careers
+                </p>
+              </Link>
               <p className="cursor-pointer opacity-80  hover:opacity-100">
                 Blogs
               </p>
@@ -164,15 +184,23 @@ const Footer = () => {
             </p>
           </div>
         </div>
-        <div className="  flex w-full gap-x-6 absolute justify-between -bottom-6 items-center text-white mb-0  lg:hidden md:hidden xl:hidden 2xl:hidden sm:hidden  flex-col ">
+        <div className="  flex w-full gap-x-6 absolute justify-between -bottom-6 items-center text-white mb-0  lg:hidden  xl:hidden 2xl:hidden   flex-col ">
           <div className="flex w-full items-center gap-x-6 flex-row justify-between">
-            <div className=" w-[20%] bg-white h-[.1rem]"></div>
-
-            <div className="flex items-center   justify-center  text-[13px] lg:text-[16px] gap-x-1 lg:gap-x-1">
+            <div className=" w-[18%] md:w-[10%] sm:w-[5%] bg-white h-[.1rem]"></div>
+            <div className=" md:flex  sm:flex flex-col hidden">
+              <p className=" sm:text-[13px] text-[10px] md:text-[13px] ">
+                {" "}
+                Begusarai 851101, Bihar{" "}
+              </p>
+              <p className="  sm:text-[13px] md:text-[14px] text-[10px]">
+                India
+              </p>
+            </div>
+            <div className="flex items-center   justify-center  text-[14px] lg:text-[16px] gap-x-1 lg:gap-x-1">
               <a className="flex gap-x-[5px]" href="https://zorway.in/">
                 <span className=""> powered by</span>
 
-                <img className="lg:w-[24px] w-[20px] " src={zorway} />
+                <img className="lg:w-[24px] w-[18px] " src={zorway} />
 
                 <a href="https://zorway.in/">
                   {" "}
@@ -180,8 +208,21 @@ const Footer = () => {
                 </a>
               </a>
             </div>
-
-            <div className="w-[20%] bg-white h-[.1rem]"></div>
+            <div className=" items-center   justify-between   md:flex  sm:flex   hidden">
+              <div className="flex gap-x-3">
+                <a href="https://drive.google.com/file/d/1B39WDvGohMvVnwn_eZbBKrz9jtWD7adT/view?usp=sharing">
+                  <p className="  sm:text-[14px] md:text-[14px] text-[10px]">
+                    Terms of services
+                  </p>
+                </a>
+                <a href="https://drive.google.com/file/d/1zoNsY3xqhBV3FKygQZKY6CzlW5GgP5l9/view?usp=sharing">
+                  <p className="  sm:text-[14px]  md:text-[14px] text-[10px]">
+                    Privacy Policy
+                  </p>
+                </a>
+              </div>
+            </div>
+            <div className="w-[18%] md:w-[10%] sm:w-[5%] bg-white h-[.1rem]"></div>
           </div>
           <div className="w-full  ">
             <div className=" bg-[#0529BB]  w-[full] flex flex-row py-2 justify-center mx-auto items-center     ">
@@ -194,10 +235,10 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="lg:flex md:flex sm:flex hidden text-white items-center gap-x-6 mt-4 w-full   opacity-80 absolute lg:w-[100%] md:w-[100%] top-[36rem] lg:top-[36rem] justify-between">
+      <div className="lg:flex   hidden text-white items-center gap-x-6 mt-4 w-full   opacity-80 absolute lg:w-[100%] md:w-[100%] top-[36rem] lg:top-[36rem] justify-between">
         <div className="flex items-center  w-full gap-x-[1.2rem]">
           <div className="lg:w-[146px]  w-[44px] bg-white h-[.1rem]"></div>
-          <div className=" lg:flex md:flex xl:flex sm:flex flex-col hidden">
+          <div className=" lg:flex  xl:flex flex-col hidden">
             <p className=" sm:text-[14px] lg:text-[16px] text-[10px] md:text-[14px] ">
               {" "}
               Begusarai 851101, Bihar{" "}
@@ -219,20 +260,24 @@ const Footer = () => {
             </a>
           </a>
         </div>
-        <div className=" items-center w-full gap-x-0  justify-between   lg:gap-x-[8px] lg:flex md:flex xl:flex sm:flex  hidden">
+        <div className=" items-center w-full gap-x-0  justify-between   lg:gap-x-[8px] lg:flex  xl:flex   hidden">
           <div className="flex gap-x-3">
-            <p className=" lg:text-[16px] sm:text-[14px] md:text-[14px] text-[10px]">
-              Terms of services
-            </p>
-            <p className=" lg:text-[16px] sm:text-[14px]  md:text-[14px] text-[10px]">
-              Privacy Policy
-            </p>
+            <a href="https://drive.google.com/file/d/1B39WDvGohMvVnwn_eZbBKrz9jtWD7adT/view?usp=sharing">
+              <p className=" lg:text-[16px] sm:text-[14px] md:text-[14px] text-[10px]">
+                Terms of services
+              </p>
+            </a>
+            <a href="https://drive.google.com/file/d/1zoNsY3xqhBV3FKygQZKY6CzlW5GgP5l9/view?usp=sharing">
+              <p className=" lg:text-[16px] sm:text-[14px]  md:text-[14px] text-[10px]">
+                Privacy Policy
+              </p>
+            </a>
           </div>
           <div className="lg:w-[144px] w-[100px] bg-white h-[.1rem]"></div>
         </div>
       </div>
       <div className=" bg-[#0529BB] hidden   w-[full] lg:flex lg:flex-row py-2 justify-center mx-auto items-center     ">
-        <p className=" mx-auto w-full justify-center  text-white opacity-80 flex items-center gap-x-2 ">
+        <p className=" mx-auto w-full justify-center   text-white opacity-80 flex items-center gap-x-2 ">
           {" "}
           Copyright
           <FaRegCopyright /> 2024, Shamyani Health Services Pvt. Ltd. All rights

@@ -20,7 +20,7 @@ const ContactUs = () => {
       id="ContactUs"
       className="lg:flex justify-center relative bg-[#E1E0E0]    w-full gap-x-[4rem] items-center"
     >
-      <img className="z-20 mx-auto w-[40%]  " src={MedicineBro} />
+      <img className="z-20 mx-auto w-[60%]  " src={MedicineBro} />
 
       <div className="flex mt-12 lg:mt-16  mr-10  border-l-2 z-20  border-[#7C7B7B] flex-col w-[100%] items-start">
         <div className="lg:bg-white lg:flex hidden    lg:w-[20rem] h-[3.8rem] rounded-r-full">

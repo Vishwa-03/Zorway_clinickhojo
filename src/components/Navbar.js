@@ -47,9 +47,10 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="hover:text-[#FF0B0B] cursor-pointer group weight text-[20px] font-poppins transition-all duration-200 mb-2 md:mb-0 sm:text-[17.5px]  md:text-[18px] lg:mb-0">
-              <Link to="#Careers" smooth>
+              <Link to="#Career" smooth>
                 Careers
               </Link>
+              
             </li>
             <li className="hover:text-[#FF0B0B] cursor-pointer group weight text-[20px] font-poppins transition-all duration-200 mb-2  md:mb-0  sm:text-[17.5px] md:text-[18px] lg:mb-0">
               <Link to="#Blogs" smooth>
@@ -80,8 +81,8 @@ const Navbar = () => {
         </div>
       </div>
 
-      <nav class="bg-white  lg:hidden md:hidden sm:hidden h-[4.5rem]  border-gray-200 ">
-        <div class="flex h-[100px]   justify-between items-center mx-auto max-w-screen-xl p-1">
+      <nav class="bg-white  lg:hidden md:hidden sm:hidden h-[4.1rem]  border-gray-200 ">
+        <div class="flex h-[85px]   justify-between items-center mx-auto max-w-screen-xl p-1">
           <div className=" relative">
             <a
               href=""
@@ -89,11 +90,15 @@ const Navbar = () => {
             >
               <img
                 src={Logo}
-                className=" w-[140px] -mt-2 "
+                className=" w-[140px] h-[115px]  object-contain z-0 -mt-3 "
                 alt="Flowbite Logo"
               />
             </a>
-            <PiTrademark className=" absolute top-5 right-1" color="#0529BB" size={21}/>
+            <PiTrademark
+              className=" absolute top-2 right-3"
+              color="#0529BB"
+              size={21}
+            />
           </div>
           <div class="flex items-center space-x-6 rtl:space-x-reverse">
             <div className="flex -mt-6  bg-[#FA0808] items-center w-full lg:w-[200px] hover:scale-105 transition-all cursor-pointer duration-300 rounded-[8px] py-[8px] px-[7px]">
@@ -107,7 +112,7 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-      <nav class="bg-gray-50 lg:hidden md:hidden sm:hidden dark:bg-gray-700">
+      <nav class="bg-gray-50 z-20 lg:hidden md:hidden sm:hidden dark:bg-gray-700">
         <div class="max-w-screen-xl px-4 py-3 mx-auto">
           <div class="flex items-center justify-between mr-1">
             <ul class="flex flex-row justify-evenly font-medium mt-0 space-x-3 rtl:space-x-reverse text-sm">
@@ -121,20 +126,24 @@ const Navbar = () => {
                 </a>
               </li>
               <li>
-                <a
-                  href="#AboutUs"
-                  class="text-gray-900 dark:text-white hover:underline"
-                >
-                  About Us
-                </a>
+                <Link to="#AboutUs" smooth>
+                  <a
+                    href="#AboutUs"
+                    class="text-gray-900 z-10 dark:text-white hover:underline"
+                  >
+                    About Us
+                  </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  class="text-gray-900 dark:text-white hover:underline"
-                >
-                  Careers
-                </a>
+                <Link to="#Careers" smooth>
+                  <a
+                    href="#Careers"
+                    class="text-gray-900 dark:text-white hover:underline"
+                  >
+                    Careers
+                  </a>
+                </Link>
               </li>
               <li>
                 <a
