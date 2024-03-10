@@ -4,6 +4,8 @@ import { MdLocalPhone, MdMessage } from "react-icons/md";
 import { RxEnvelopeClosed } from "react-icons/rx";
 import { send } from "emailjs-com";
 import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
+import { wait } from "@testing-library/user-event/dist/utils";
 
 const ContactForm = () => {
   const [FormData, setFormData] = useState({
@@ -17,7 +19,10 @@ const ContactForm = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+    // test email
+    // sendForm("service_tvtn4aa", "template_8x9t1st", form.current, {
+    //   publicKey: "JS_UPkJ-s6kN6yhth",
+    // })
     emailjs
       .sendForm("service_ehdxk82", "template_q5yn98a", form.current, {
         publicKey: "ppNWdc6NKBn6cYnig",
@@ -25,11 +30,18 @@ const ContactForm = () => {
       .then(
         () => {
           console.log("SUCCESS!");
+          toast.success("Email sent successfully");
         },
         (error) => {
           console.log("FAILED...", error.text);
         }
       );
+      // toast.success("Email sent successfully");
+      setTimeout(() => {
+        // Update the message after the delay
+        // setMessage('Process complete!');
+        window.location.reload();
+      }, 2000);
   };
 
   const changeHandler = (event) => {
@@ -44,14 +56,14 @@ const ContactForm = () => {
       id="Contact"
       className="w-[335px]  overflow-hidden h-[480px] mx-auto mt-8 p-6rounded-md bg-transparent  "
     >
-      <form ref={form} className="" onSubmit={sendEmail}>
+      <form ref={form} className=" flex flex-col" onSubmit={sendEmail}>
         <div className="mb-4 z-10 relative ">
-          <div className=" absolute top-[23%] ">
+          <div className=" absolute  top-[23%] ">
             {FormData.name === "" ? (
               <div className="  px-2 flex gap-x-[2rem] items-center">
                 <MdOutlinePersonOutline size={24} />
                 <span className=" font-poppins text-[#535252] text-[12px] font-semibold">
-                  Full Name{" "}
+                  Full Name
                 </span>
               </div>
             ) : (
@@ -62,7 +74,7 @@ const ContactForm = () => {
           <input
             type="text"
             required
-            className="  bg-white  bg-opacity-25  text-black text-opacity-75 py-[.90rem] h-[44px]  drop-shadow-md px-[.65rem] w-full border rounded-md"
+            className="  bg-white  bg-opacity-25  text-black text-opacity-75 py-[.90rem] h-[44px]  drop-shadow-md px-[2rem]  w-full  border rounded-md"
             value={FormData.name}
             name="name"
             onChange={changeHandler}
@@ -85,7 +97,7 @@ const ContactForm = () => {
           <input
             type="email"
             required
-            className=" bg-white  bg-opacity-25  text-black text-opacity-75 py-[.90rem] h-[44px]  drop-shadow-md px-[.65rem] w-full border rounded-md"
+            className=" bg-white  bg-opacity-25  text-black text-opacity-75 py-[.90rem] h-[44px]  drop-shadow-md px-[2.3rem] w-full border rounded-md"
             value={FormData.email}
             name="email"
             onChange={changeHandler}
@@ -107,7 +119,7 @@ const ContactForm = () => {
           <input
             type="tel"
             required
-            className=" bg-white  bg-opacity-25  text-black text-opacity-75 py-[.90rem] h-[44px]  drop-shadow-md px-[.65rem] w-full border rounded-md"
+            className=" bg-white  bg-opacity-25  text-black text-opacity-75 py-[.90rem] h-[44px]  drop-shadow-md px-[2.1rem] w-full border rounded-md"
             value={FormData.phoneNumber}
             name="phoneNumber"
             onChange={changeHandler}
@@ -149,12 +161,12 @@ const ContactForm = () => {
           </div>
         </div>
         <div className="mb-4 z-10 relative ">
-          <div className=" absolute top-[10%] ">
+          <div className=" absolute top-[5%] ">
             {FormData.message === "" ? (
               <div className="  px-2 flex gap-x-[2rem] items-center">
                 <MdMessage size={24} />
                 <span className=" font-poppins text-[#535252] text-[12px] font-semibold">
-                 Write us a message{" "}
+                  Write us a message{" "}
                 </span>
               </div>
             ) : (
@@ -167,19 +179,20 @@ const ContactForm = () => {
           </span> */}
 
           <textarea
-            rows="9" cols="80"
+            rows="9"
+            cols="80"
             required
-            className=" bg-white   bg-opacity-25 text-black text-opacity-75 py-[.20rem] h-[164px]  drop-shadow-md px-[.65rem] w-full border rounded-md"
+            className=" bg-white   bg-opacity-25 text-black text-opacity-75 py-[.4rem] h-[164px]  drop-shadow-md px-[2.2rem] w-full border rounded-md"
             value={FormData.message}
             name="message"
             onChange={changeHandler}
           />
         </div>
-        <div className="mt-4   ">
+        <div className="mt-4 mx-auto lg:mx-0  md:mx-0 sm:mx-0  xl:mx-0   ">
           <button
             type="submit"
             value="Send"
-            className="bg-[#229649] drop-shadow-lg mb-[4rem] text-white py-2 px-4 rounded-md hover:scale-105 transition-all duration-300"
+            className="bg-[#229649] drop-shadow-lg mb-[4rem] mx-auto text-white py-2 px-4 rounded-md hover:scale-105 transition-all duration-300"
           >
             Submit
           </button>

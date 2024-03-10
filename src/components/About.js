@@ -17,19 +17,22 @@ const About = () => {
           <div className="flex flex-col lg:bg-inherit  items-start">
             <div
               id=""
-              className="bg-white -ml-[7rem] xl:-ml-[6rem] lg:-ml-[1.8rem] mt-40 lg:mt-[10rem] w-[364px] h-[60px] rounded-r-full"
+              className="bg-white mx-auto  xl:-ml-[6.4rem] lg:-ml-[1.8rem] md:-ml-[3rem] mt-40 lg:mt-[10rem] lg:w-[364px] md:w-[364px] sm:w-[300px] lg:h-[60px] xl:h-[60px] md:h-[60px] h-[50px] md:rounded-r-full rounded-full lg:rounded-r-full w-[250px] "
             >
-              <div className="flex flex-row-reverse lg:mr-[2rem] mr-[2rem] items-end text-[#0529BB] font-medium ">
-                <p className=" font-poppins text-[38px]">About Us</p>
+              <div className="flex flex-row-reverse lg:mr-[2rem] md:mr-[2rem]  items-end text-[#0529BB] font-medium ">
+                <p className=" font-poppins mx-auto lg:mx-0 xl:mx-0 md:mx-0 text-[30px] lg:text-[38px] md:text-[38px] sm:text-[38px]">
+                  About Us
+                </p>
               </div>
             </div>
 
             <div className="h-[32rem] ">
-              <div className="flex flex-col mt-[3rem] md:mt-2   h-[100rem]  bg-[#E1E0E0] lg:bg-inherit gap-0  lg:gap-[2rem] lg:ml-[6rem] lg:w-[660px] md:h-[300px] sm:h-[400px] w-full px-4 lg:px-0  md:w-11/12  md:mx-auto">
-                <p className="text-justify text-[#3b3a3b] w-full  font-poppins   leading-[20.6px] lg:leading-[25px] text-[12.5px] lg:text-[16px]  md:text-[16px] sm:text-[16px]">
+              <div className="flex flex-col mt-4 lg:mt-[1rem]  xl:mt-[2rem] md:mt-2   h-[100rem]  bg-[#E1E0E0] lg:bg-inherit gap-0  lg:gap-[2rem] lg:ml-[6rem] lg:w-[660px] md:h-[300px] sm:h-[400px] w-full px-4 lg:px-0  md:w-11/12  md:mx-auto">
+                <p className="text-justify text-[#3b3a3b] w-full px-2  font-poppins   leading-[20.6px] lg:leading-[25px] text-[12.5px] lg:text-[16px]  md:text-[16px] sm:text-[16px]">
                   Welcome to Clinic Khojo, your premier health tech solution
                   revolutionizing the way patients connect with nearby doctors.
-                  As a proud unit of the Shamyani health services pvt ltd. (An
+                  As a proud unit of the <a className=" text-[#0529BB]" href="https://www.facebook.com/profile.php?id=61556769371135&mibextid=ZbWKwL">
+                  Shamyani health services pvt ltd. </a>  (An
                   ISO 9001:2015 certified company) headquartered in the vibrant
                   city of Begusarai, Bihar, we are committed to enhancing access
                   to quality healthcare services for all. At Clinic Khojo, we
@@ -100,14 +103,14 @@ const About = () => {
               </div> */}
                 <div className=" md:hidden lg:hidden ">
                   <div>
-                    <div className="bg-white -ml-[4.5rem] xl:-ml-[12rem] lg:-ml-[8rem] mt-8 lg:mt-[3rem] w-[364px] h-[60px] rounded-r-full items-center">
-                      <div className="flex flex-row-reverse lg:mr-[2rem] mr-[2rem] items-end text-[#0529BB] font-medium  ">
-                        <p className=" font-poppins text-[34px]">
+                    <div className="bg-white mx-auto xl:-ml-[12rem] lg:-ml-[8rem] mt-12 lg:mt-[3rem] w-[310px] h-[50px]  md:w-[364px] md:h-[60px] sm:w-[364px] sm:h-[60px] lg:w-[364px] lg:h-[60px] rounded-full items-center">
+                      <div className="flex flex-row-reverse lg:mr-[2rem]  items-end text-[#0529BB] font-medium  ">
+                        <p className=" font-poppins text-[30px] mx-auto">
                           Benefits to doctor
                         </p>
                       </div>
                     </div>
-                    <p className=" text-justify text-[#3b3a3b] w-full mt-10  font-poppins  leading-[20.6px] lg:leading-[25px] text-[12.5px] lg:text-[16px]  md:text-[16px] sm:text-[16px]">
+                    <p className=" text-justify text-[#3b3a3b] w-full lg:mt-10 md:mt-10 mt-6 px-2  font-poppins  leading-[20.6px] lg:leading-[25px] text-[12.5px] lg:text-[16px]  md:text-[16px] sm:text-[16px]">
                       Clinic Khojo offers doctors numerous advantages, including
                       increased visibility to potential patients, efficient
                       appointment management, and access to patient information
@@ -119,14 +122,14 @@ const About = () => {
                       networking, enabling doctors to enhance their practice and
                       contribute to improving healthcare accessibility.
                     </p>
-                    <div className="bg-white -ml-[4rem] xl:-ml-[12rem] lg:-ml-[8rem] mt-8 lg:mt-[3rem] w-[364px] h-[60px] rounded-r-full">
-                      <div className="flex flex-row-reverse lg:mr-[2rem] mr-[2rem] items-end text-[#0529BB] font-medium ">
-                        <p className=" font-poppins text-[34px]">
+                    <div className="bg-white  xl:-ml-[12rem] lg:-ml-[8rem] mt-12 lg:mt-[3rem] w-[304px] h-[50px] md:w-[364px] md:h-[60px] sm:w-[364px] sm:h-[60px] lg:w-[364px] lg:h-[60px] rounded-full mx-auto">
+                      <div className="flex flex-row-reverse lg:mr-[2rem]  items-end text-[#0529BB] font-medium ">
+                        <p className=" mx-auto my-auto font-poppins text-[30px] ">
                           Benefits to patient
                         </p>
                       </div>
                     </div>
-                    <p className="text-justify text-[#3b3a3b] w-full mt-10  font-poppins  leading-[20.6px] lg:leading-[25px] text-[12.5px] lg:text-[16px]  md:text-[16px] sm:text-[16px]">
+                    <p className="text-justify text-[#3b3a3b] w-full mt-6 px-2 font-poppins  leading-[20.6px] lg:leading-[25px] text-[12.5px] lg:text-[16px]  md:text-[16px] sm:text-[16px]">
                       Clinic Khojo offers patients numerous advantages. It
                       provides convenience by enabling easy appointment booking
                       with nearby doctors, ensuring timely access to care. The
@@ -141,27 +144,37 @@ const About = () => {
                     </p>
                   </div>
                   <div
-
                     id="Careers"
-                    className="bg-white -ml-[8rem] xl:-ml-[12rem] lg:-ml-[8rem] mt-8 lg:mt-[3rem] w-[364px] h-[60px] rounded-r-full"
+                    className="bg-white  xl:-ml-[12rem] lg:-ml-[8rem] mt-12 lg:mt-[3rem] w-[240px] h-[50px] md:w-[364px] md:h-[60px] sm:w-[364px] sm:h-[60px] lg:w-[364px] lg:h-[60px] rounded-full mx-auto"
                   >
-                    <div className="flex flex-row-reverse lg:mr-[2rem] mr-[6.4rem]  items-end text-[#0529BB] font-medium ">
-                      <p className=" font-poppins text-[38px]">Careers</p>
+                    <div className="flex flex-row-reverse lg:mr-[2rem]   items-end text-[#0529BB] font-medium  mx-auto mt-0">
+                      <p className=" font-poppins text-[30px] mx-auto">
+                        Careers
+                      </p>
                     </div>
                   </div>
-
-                  <p className="text-justify text-[#3b3a3b] w-full  mt-10 font-poppins  leading-[20.6px] lg:leading-[25px] text-[12.5px] lg:text-[16px]  md:text-[16px] sm:text-[16px]">
-                    Join Clinic Khojo for an opportunity to be part of a dynamic
-                    team reshaping healthcare accessibility. We offer exciting
-                    career prospects in a collaborative environment, where your
-                    skills can make a real difference in people's lives. Whether
-                    you're tech-savvy, a healthcare professional, or a marketing
-                    enthusiast, Clinic Khojo welcomes passionate individuals
-                    ready to innovate and drive positive change.
-                    <span className="text-[#FA0808]">
-                      Send your CV at hr@clinickhojo.com
+                  <div className="flex justify-center flex-col">
+                    <p className="text-justify text-[#3b3a3b] px-2 w-full  mt-6 font-poppins  leading-[20.6px] lg:leading-[25px] text-[12.5px] lg:text-[16px]  md:text-[16px] sm:text-[16px]">
+                      Join Clinic Khojo for an opportunity to be part of a
+                      dynamic team reshaping healthcare accessibility. We offer
+                      exciting career prospects in a collaborative environment,
+                      where your skills can make a real difference in people's
+                      lives. Whether you're tech-savvy, a healthcare
+                      professional, or a marketing enthusiast, Clinic Khojo
+                      welcomes passionate individuals ready to innovate and
+                      drive positive change.
+                    </p>
+                    <span className="text-white mx-auto mt-3 bg-[#FA0808] py-1.5 px-3 font-medium rounded-full">
+                      <div className="flex gap-x-1">
+                        <span>Send your CV at</span>
+                        <span className=" underline">
+                          <a href="mailto:hr@clinickhojo.com" className=" ">
+                            hr@clinickhojo.com
+                          </a>
+                        </span>
+                      </div>
                     </span>
-                  </p>
+                  </div>
                 </div>
                 {/* <img
             className="h-[15rem] absolute right-[30%] top-0  "
@@ -188,7 +201,7 @@ const About = () => {
           className=" absolute w-[11rem] lg:w-[14rem] md:w-[14rem] sm:w-[14rem] top-4 right-4  h-[13rem] lg:left-[35rem] "
         />
       </div>
-      <div id="Career" className="hidden lg:flex md:flex">
+      <div id="Career" className="hidden lg:flex md:flex xl:flex">
         <AboutUs2 />
       </div>
     </div>

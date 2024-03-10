@@ -62,7 +62,7 @@ const Navbar = () => {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row   xl:gap-x-6 lg:gap-x-4 lg:flex-row w-full lg:w-[380px] xl:ml-auto xl:w-[410px] md:items-center lg:ml-auto md:w-[300px] md:flex-row md:gap-x-4 sm:items-center sm:gap-x-3 ">
-            <div className="flex lg:justify-evenly lg:h-[50px] bg-[#FA0808] items-center w-full lg:w-[180px] xl:w-[200px] md:w-[170px] md:h-[50px] hover:scale-105 transition-all cursor-pointer duration-300 rounded-[8px] py-[8px] px-[15px] md:px-[6px] md:gap-x-1 mb-2 md:mb-1 lg:mb-[3px] sm:w-[100px]  sm:h-[40px] sm:mb-0 sm:justify-evenly sm:px-1">
+            <div className="flex  lg:h-[50px] bg-[#FA0808] items-center w-full lg:w-[180px] xl:w-[200px] md:w-[170px] md:h-[50px] hover:scale-105 transition-all cursor-pointer duration-300 rounded-[8px] py-[8px] px-[15px] md:px-[6px] md:gap-x-0 mb-2 md:mb-1 lg:mb-[3px] sm:w-[100px]  sm:h-[40px] sm:mb-0 sm:justify-evenly sm:px-1">
               <button className="font-poppins text-[20px] lg:text-[19px] md:text-[17px] sm:text-[14px] text-white">
                 <Link to="#Download" smooth>
                   Download App
@@ -76,13 +76,13 @@ const Navbar = () => {
                   Contact us
                 </Link>
               </button>
-              <MdPermContactCalendar className="" size={18} color="red" />
+              <MdPermContactCalendar className="" size={22} color="red" />
             </div>
           </div>
         </div>
       </div>
 
-      <nav class="bg-white  lg:hidden md:hidden sm:hidden h-[4.1rem]  border-gray-200 ">
+      <nav class="bg-white  lg:hidden md:hidden sm:hidden h-[4rem]  border-gray-200 ">
         <div class="flex h-[85px]   justify-between items-center mx-auto max-w-screen-xl p-1">
           <div className=" relative">
             <a
@@ -102,7 +102,7 @@ const Navbar = () => {
             />
           </div>
           <div class="flex items-center space-x-6 rtl:space-x-reverse">
-            <div className="flex -mt-6  bg-[#FA0808] items-center w-full lg:w-[200px] hover:scale-105 transition-all cursor-pointer duration-300 rounded-[8px] py-[8px] px-[7px]">
+            <div className="flex -mt-6  bg-[#FA0808] items-center w-full lg:w-[200px] hover:scale-105 transition-all cursor-pointer duration-300 rounded-[8px] py-[8px] px-[7px] mr-3">
               <button className="font-poppins text-[14px] text-white">
                 <Link to="#Download" smooth>
                   Download App
@@ -110,18 +110,18 @@ const Navbar = () => {
               </button>
               <MdDownload color="white" size={20} />
             </div>
-      <HamburgerMenu/>
+      {/* <HamburgerMenu/> */}
           </div>
         </div>
       </nav>
-      {/* <nav class="bg-gray-50 z-20 lg:hidden md:hidden sm:hidden dark:bg-gray-700">
+      <nav class="bg-gray-50 z-20 lg:hidden md:hidden sm:hidden dark:bg-gray-700">
         <div class="max-w-screen-xl px-4 py-3 mx-auto">
-          <div class="flex items-center justify-between mr-1">
+          <div class="flex items-center justify-between">
             <ul class="flex flex-row justify-evenly font-medium mt-0 space-x-3 rtl:space-x-reverse text-sm">
               <li>
                 <a
                   href="#"
-                  class="text-gray-900 dark:text-white hover:underline"
+                  class="text-gray-900 text-[16px] dark:text-white hover:underline"
                   aria-current="page"
                 >
                   Home
@@ -131,7 +131,7 @@ const Navbar = () => {
                 <Link to="#AboutUs" smooth>
                   <a
                     href="#AboutUs"
-                    class="text-gray-900 z-10 dark:text-white hover:underline"
+                    class="text-gray-900 z-10  text-[16px] dark:text-white hover:underline"
                   >
                     About Us
                   </a>
@@ -141,7 +141,7 @@ const Navbar = () => {
                 <Link to="#Careers" smooth>
                   <a
                     href="#Careers"
-                    class="text-gray-900 dark:text-white hover:underline"
+                    class="text-gray-900  text-[16px] dark:text-white hover:underline"
                   >
                     Careers
                   </a>
@@ -149,27 +149,27 @@ const Navbar = () => {
               </li>
               <li>
                 <a
-                  href="#"
-                  class="text-gray-900 dark:text-white hover:underline"
+                  href="https://drive.google.com/file/d/1G9vvOVifQy4sRe6ptdiQXbXDVtHqxyfl/view"
+                  class="text-gray-900  text-[16px] dark:text-white hover:underline"
                 >
                   Blogs
                 </a>
               </li>
             </ul>
             <div
-              className="flex -mr-4 bg-white items-center border-2 w-[88px] rounded-lg gap-[5px] border-red-500 
-             px-[1px] hover:scale-105 transition-all duration-300 cursor-pointer py-[8px]"
+              className="flex  bg-white items-center border-2  rounded-lg  border-red-500 
+             px-[6px] hover:scale-105 transition-all duration-300 cursor-pointer py-[4px] "
             >
-              <button className="text-[#FA0808] text-[12px] font-poppins">
+              <button className="text-[#FA0808] text-[14px] font-medium font-poppins">
                 <Link to="#Contact" smooth>
                   Contact us
                 </Link>
               </button>
-              <MdPermContactCalendar size={18} color="red" />
+              <MdPermContactCalendar size={16} color="red" />
             </div>
           </div>
         </div>
-      </nav> */}
+      </nav>
     </div>
   );
 };

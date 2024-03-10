@@ -12,29 +12,29 @@ const HeroSection = () => {
       <Navbar />
       <div>
 
-      <div className="flex z-10 flex-col-reverse lg:flex-row xl:flex-row lg:w-full md:flex-row sm:flex-row overflow-y-hidden ml-[10px] mt-[60px] lg:mt-[80px] lg:gap-[110px] md:gap-[50px] md:mt-20  lg:h-[500px] ">
+      <div className="flex z-10 flex-col-reverse lg:flex-row xl:flex-row lg:w-full md:flex-row sm:flex-row overflow-y-hidden ml-[10px] mr-[10px] mt-[60px] lg:mt-[80px] lg:gap-[110px] md:gap-[50px] md:mt-20  lg:h-[500px] ">
         <img src={Image1} className="lg:w-[50%] z-10 lg:h-[500px] h-[300px] sm:w-[57%] "  />
         <div className="flex flex-col gap-[60px] lg:gap-y-[60px] md:gap-[42px]  lg:w-[495px] md:w-[420px] h-[348px] my-auto sm:gap-[30px]">
           <div>
-            <div className="lg:w-[50%] md:w-[50%] w-[40%] sm:w-[67%] h-[35px] flex mx-auto font-poppins rounded-3xl items-center  bg-white text-[#2300FF]">
+            <div className="lg:w-[50%] md:w-[50%] w-[40%] sm:w-[67%] h-[35px] flex mx-auto lg:mx-0 md:mx-0 sm:mx-0 font-poppins rounded-3xl items-center  bg-white text-[#2300FF]">
               <p className="lg:w-[166px]   items-center mx-auto lg:mx-auto md:mx-auto lg:text-[22px] md:text-[17px]   font-bold leading-8">
                 Find your clinic
               </p>
             </div>
 
-            <h1 className="lg:text-[40px] xl:text-[40px] text-[36px] md:text-[30px] h-[88px] text-white lg:leading-[60px] text-center  md:leading-[45px] sm:leading-[36px]  text-wrap sm:text-[28px]">
+            <h1 className="lg:text-[40px] xl:text-[40px] text-[36px] md:text-[30px] h-[88px] text-white lg:leading-[60px] text-center lg:text-left md:text-left sm:text-left  md:leading-[45px] sm:leading-[36px]  text-wrap sm:text-[28px]">
               Connecting Patients with Nearby Doctors
             </h1>
           </div>
 
-          <div className="h-[51px] lg:text-[24px] text-[19px] text-center text-white font-poppins">
+          <div className="h-[51px] lg:text-[24px] text-[19px] text-center lg:text-left md:text-left sm:text-left text-white font-poppins">
             Effortlessly book consultations with nearby doctors through{" "}
             <span className=" italic leading-[36px] font-bold text-yellow-400 ">
               {" "}
               Clinic Khojo{" "}
             </span>
           </div>
-          <div className="flex mx-auto  bg-[#FA0808] items-center hover:scale-105 transition-all cursor-pointer duration-300 h-[46px] w-[150px]  rounded-[8px] py-[8px] px-[8px] justify-evenly drop-shadow-md sm:mt-4 ">
+          <div className="flex mx-auto lg:mx-0 md:mx-0 sm:mx-0  bg-[#FA0808] items-center hover:scale-105 transition-all cursor-pointer duration-300 h-[46px] w-[150px]  rounded-[8px] py-[8px] px-[8px] justify-evenly drop-shadow-md sm:mt-4 ">
             <button className=" font-poppins text-[20px]  text-white">
             <Link to="#Contact" smooth> Contact us </Link> 
             </button>

@@ -8,12 +8,64 @@ import wheelchair from "../assests/wheelchair.png";
 import { PiTrademark } from "react-icons/pi";
 import { FaRegCopyright } from "react-icons/fa";
 import { HashLink as Link } from "react-router-hash-link";
+import { useRef } from "react";
+
+import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
 
 const Footer = () => {
   const [message, setMessage] = useState("");
-  const handleSubmit = (e) => {
+  const form = useRef();
+  const form2 = useRef();
+  const sendEmail = (e) => {
     e.preventDefault();
     // Handle form submission logic here
+    emailjs
+      .sendForm("service_ehdxk82", "template_bxasuj5", form.current, {
+          publicKey: "ppNWdc6NKBn6cYnig",
+        })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          toast.success("Message sent successfully");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+    // toast.success("Email sent successfully");
+    setTimeout(() => {
+      // Update the message after the delay
+      // setMessage('Process complete!');
+      window.location.reload();
+    }, 2200);
+   
+    console.log(message);
+  };
+  const sendEmail2 = (e) => {
+    e.preventDefault();
+    // Handle form submission logic here
+   
+    // toast.success("Email sent successfully");
+    
+    emailjs
+    .sendForm("service_tvtn4aa", "template_gy78kvr", form2.current, {
+        publicKey: "JS_UPkJ-s6kN6yhth",
+      })
+    .then(
+      () => {
+        console.log("SUCCESS!");
+        toast.success("Message sent successfully");
+      },
+      (error) => {
+        console.log("FAILED...", error.text);
+      }
+    );
+    setTimeout(() => {
+      // Update the message after the delay
+      // setMessage('Process complete!');
+      window.location.reload();
+    }, 2200);
     console.log(message);
   };
   const changeHandler = (event) => {
@@ -103,25 +155,38 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex flex-col gap-y-2  w-[260px] md:w-[260px] lg:w-[260px] sm:w-[260px] lg:ml-10 mt-4  md:ml-0 mr-10 ml-6 relative items-center cursor-pointer h-[44px] rounded-lg">
-              <form className=" ">
+              <form ref={form} className=" " onSubmit={sendEmail}>
+               {/* <div className="">
+
                 {message === "" ? (
-                  <span className="absolute font-poppins text-[#535252] text-[12px] top-[.75rem] left-[2rem]">
+                  <span className="absolute font-poppins  text-[#535252] text-[12px] top-[.75rem] left-[2rem]" onClick={()=>{
+                    
+                  }}>
                     Send Message
                   </span>
                 ) : (
                   <span></span>
-                )}
+                  )}
 
+                  </div> */}
+               
+                <input
+                   type="text"
+                   id="message"
+                   name="message"
+                   value={message.name}
+                   onChange={changeHandler}
+                  className="lg:w-[240px] w-[250px] h-[40px] lg:rounded-l-lg rounded  border-none cursor-pointer border-transparent outline-none px-3  "
+                  placeholder="Send message"
+                />
+                  <button type="submit" value="Send">
+                    .
+                <div className="bg-[#FA0808] lg:-right-[2px] absolute   top-[0px] h-[40.5px]  lg:h-[40px] w-[62px] rounded-r-lg md:-right-1 sm:right-0 right-0">
+                </div>
                 <span className="absolute top-[0.5rem] z-20 lg:right-[1rem] lg:top-[.45rem] md:right-5 sm:right-5 right-5">
                   <FaPaperPlane color="white" size={24} />
                 </span>
-                <input
-                  type="text"
-                  name="message"
-                  onChange={changeHandler}
-                  className="lg:w-[240px] w-[250px] h-[40px] lg:rounded-l-lg rounded  border-none cursor-pointer "
-                />
-                <div className="bg-[#FA0808] lg:-right-[2px] absolute   top-[0px] h-[40.5px]  lg:h-[40px] w-[62px] rounded-r-lg md:-right-1 sm:right-0 right-0"></div>
+                  </button>
               </form>
               {/* <div className='bg-[#FA0808] h-full hidden lg:flex  lg:h-[40px] w-[62px] rounded-r-lg'>
             </div> */}
@@ -150,7 +215,7 @@ const Footer = () => {
               </Link>
             </div>
             <div className="">
-              <Link to="#Careers" smooth>
+              <Link to="#Career" smooth>
                 <p className="cursor-pointer opacity-80  hover:opacity-100">
                   Careers
                 </p>
@@ -167,25 +232,32 @@ const Footer = () => {
           </div>
 
           <div className=" hidden w-[260px]  sm:hidden md:hidden xl:flex 2xl:flex lg:flex md:w-[260px] lg:w-[260px] lg:flex-col lg:gap-y-2  lg:items-center sm:w-[260px] lg:ml-10 mt-4 ml-auto md:ml-0 mr-10  relative items-center cursor-pointer h-[44px] rounded-lg">
-            <form className=" ">
-              {message === "" ? (
+            <form ref={form2} className=" " onSubmit={sendEmail2}>
+              {/* {message === "" ? (
                 <span className="absolute font-poppins text-[#535252] text-[12px] top-[.75rem] left-[2rem]">
                   Send Message
                 </span>
               ) : (
                 <span></span>
-              )}
+              )} */}
 
-              <span className="absolute top-[0.5rem] z-20 lg:right-[1rem] lg:top-[.45rem] md:right-5 sm:right-5 right-5">
+             
+              <input
+                 type="text"
+                 id="message"
+                 name="message"
+                 value={message.name}
+                 onChange={changeHandler}
+                className="lg:w-[240px] w-[250px] h-[40px] lg:rounded-l-lg rounded  border-none cursor-pointer  px-3 outline-none"
+                placeholder="Send message"
+              />
+                <button type="submit" value="Send">
+              <div className="bg-[#FA0808] lg:-right-[2px]  absolute  -top-[.1px] h-[40.5px]  lg:h-[40px] w-[62px] rounded-r-lg md:-right-1 sm:right-0 right-0">
+                   <span className="absolute top-[0.5rem] z-20 lg:right-[1rem] lg:top-[.45rem] md:right-5 sm:right-5 right-5">
                 <FaPaperPlane color="white" size={24} />
               </span>
-              <input
-                type="text"
-                name="message"
-                onChange={changeHandler}
-                className="lg:w-[240px] w-[250px] h-[40px] lg:rounded-l-lg rounded  border-none cursor-pointer "
-              />
-              <div className="bg-[#FA0808] lg:-right-[2px]  absolute  -top-[.1px] h-[40.5px]  lg:h-[40px] w-[62px] rounded-r-lg md:-right-1 sm:right-0 right-0"></div>
+              </div>
+                </button>
             </form>
             {/* <div className='bg-[#FA0808] h-full hidden lg:flex  lg:h-[40px] w-[62px] rounded-r-lg'>
             </div> */}
@@ -238,8 +310,14 @@ const Footer = () => {
             <div className=" bg-[#0529BB]  w-[full] flex flex-row py-2 justify-center mx-auto items-center     ">
               <p className=" mx-auto text-[10px] w-full justify-center  text-white opacity-80 flex items-center gap-x-2 ">
                 Copyright
-                <FaRegCopyright /> 2024, Shamyani Health Services Pvt. Ltd. All
-                rights reserved.
+                <FaRegCopyright /> 2024,
+                <a
+                  className=" hover:text-balck hover:opacity-75 duration-200"
+                  href="https://www.facebook.com/profile.php?id=61556769371135&mibextid=ZbWKwL"
+                >
+                  Shamyani Health Services Pvt Ltd.{" "}
+                </a>{" "}
+                All rights reserved.
               </p>
             </div>
           </div>
@@ -290,8 +368,14 @@ const Footer = () => {
         <p className=" mx-auto w-full justify-center   text-white opacity-80 flex items-center gap-x-2 ">
           {" "}
           Copyright
-          <FaRegCopyright /> 2024, Shamyani Health Services Pvt. Ltd. All rights
-          reserved.
+          <FaRegCopyright /> 2024,
+          <a
+            className=" hover:text-balck hover:opacity-75 duration-200"
+            href="https://www.facebook.com/profile.php?id=61556769371135&mibextid=ZbWKwL"
+          >
+            Shamyani Health Services Pvt Ltd.{" "}
+          </a>{" "}
+          All rights reserved.
         </p>
       </div>
     </div>
