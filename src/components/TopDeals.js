@@ -1,5 +1,5 @@
 import React from "react";
-import surf from "../assests/surf.svg"
+import surf from "../assests/TopDealsImage.png"
 
 const TopDeals = () => {
   return (
@@ -7,7 +7,7 @@ const TopDeals = () => {
       <h1 className="w-[198px] h-[60px] left-[657px] text-[40px] leading-[60px] text-[#0529BB] font-medium">
         Top Deals
       </h1>
-      <img  className="lg:w-[1193px] lg:h-[327px]  " src={surf}/>
+      <img  className="lg:w-[1193px] lg:h-[327px] rounded-3xl  " src={surf}/>
     </div>
   );
 };

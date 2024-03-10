@@ -79,9 +79,14 @@ const Footer = () => {
                       Careers
                     </p>
                   </Link>
-                  <p className="cursor-pointer opacity-80  hover:opacity-100">
-                    Blogs
-                  </p>
+                  <Link
+                    to="https://drive.google.com/file/d/1G9vvOVifQy4sRe6ptdiQXbXDVtHqxyfl/view"
+                    smooth
+                  >
+                    <p className="cursor-pointer opacity-80  hover:opacity-100">
+                      Blogs
+                    </p>
+                  </Link>
                 </div>
               </div>
               <div className=" flex flex-row gap-x-8 lg:hidden md:hidden sm:hidden">
@@ -150,9 +155,14 @@ const Footer = () => {
                   Careers
                 </p>
               </Link>
-              <p className="cursor-pointer opacity-80  hover:opacity-100">
-                Blogs
-              </p>
+              <Link
+                to="https://drive.google.com/file/d/1G9vvOVifQy4sRe6ptdiQXbXDVtHqxyfl/view"
+                smooth
+              >
+                <p className="cursor-pointer opacity-80  hover:opacity-100">
+                  Blogs
+                </p>
+              </Link>
             </div>
           </div>
 

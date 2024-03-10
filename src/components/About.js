@@ -49,7 +49,7 @@ const About = () => {
                   Experience the convenience of Clinic Khojo and take control of
                   your health journey
                 </p>
-                <div className="flex bg-[#FA0808] items-center gap-[10px] hover:scale-105 transition-all cursor-pointer duration-300 h-[46px] w-[169px] mt-3 lg:mt-0   rounded-[8px] py-[8px] px-[12px] justify-between drop-shadow-md">
+                <div className="flex bg-[#FA0808] items-center mx-auto lg:mx-0 md:mx-0  hover:scale-105 transition-all cursor-pointer duration-300 h-[46px] w-[160px] mt-3 lg:mt-0   rounded-[6px] py-[8px] px-[12px] justify-evenly drop-shadow-md">
                   <button className=" font-poppins text-[20px]  text-white">
                     <Link to="#Contact" smooth>
                       {" "}
@@ -107,7 +107,7 @@ const About = () => {
                         </p>
                       </div>
                     </div>
-                    <p className="text-justify text-[#3b3a3b] w-full mt-10  font-poppins  leading-[20.6px] lg:leading-[25px] text-[12.5px] lg:text-[16px]  md:text-[16px] sm:text-[16px]">
+                    <p className=" text-justify text-[#3b3a3b] w-full mt-10  font-poppins  leading-[20.6px] lg:leading-[25px] text-[12.5px] lg:text-[16px]  md:text-[16px] sm:text-[16px]">
                       Clinic Khojo offers doctors numerous advantages, including
                       increased visibility to potential patients, efficient
                       appointment management, and access to patient information
@@ -145,7 +145,7 @@ const About = () => {
                     id="Careers"
                     className="bg-white -ml-[8rem] xl:-ml-[12rem] lg:-ml-[8rem] mt-8 lg:mt-[3rem] w-[364px] h-[60px] rounded-r-full"
                   >
-                    <div className="flex flex-row-reverse lg:mr-[2rem] mr-[2rem] items-end text-[#0529BB] font-medium ">
+                    <div className="flex flex-row-reverse lg:mr-[2rem] mr-[6.4rem]  items-end text-[#0529BB] font-medium ">
                       <p className=" font-poppins text-[38px]">Careers</p>
                     </div>
                   </div>

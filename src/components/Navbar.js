@@ -4,6 +4,7 @@ import Tm from "../assests/TM.png";
 import { MdDownload, MdPermContactCalendar } from "react-icons/md";
 import { HashLink as Link } from "react-router-hash-link";
 import { PiTrademark } from "react-icons/pi";
+import HamburgerMenu from "./HamburgerMenu";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,7 +54,7 @@ const Navbar = () => {
               
             </li>
             <li className="hover:text-[#FF0B0B] cursor-pointer group weight text-[20px] font-poppins transition-all duration-200 mb-2  md:mb-0  sm:text-[17.5px] md:text-[18px] lg:mb-0">
-              <Link to="#Blogs" smooth>
+              <Link to="https://drive.google.com/file/d/1G9vvOVifQy4sRe6ptdiQXbXDVtHqxyfl/view" smooth>
                 Blogs
               </Link>
             </li>
@@ -109,10 +110,11 @@ const Navbar = () => {
               </button>
               <MdDownload color="white" size={20} />
             </div>
+      <HamburgerMenu/>
           </div>
         </div>
       </nav>
-      <nav class="bg-gray-50 z-20 lg:hidden md:hidden sm:hidden dark:bg-gray-700">
+      {/* <nav class="bg-gray-50 z-20 lg:hidden md:hidden sm:hidden dark:bg-gray-700">
         <div class="max-w-screen-xl px-4 py-3 mx-auto">
           <div class="flex items-center justify-between mr-1">
             <ul class="flex flex-row justify-evenly font-medium mt-0 space-x-3 rtl:space-x-reverse text-sm">
@@ -167,7 +169,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-      </nav>
+      </nav> */}
     </div>
   );
 };
