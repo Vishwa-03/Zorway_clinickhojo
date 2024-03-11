@@ -8,7 +8,7 @@ import About from "./components/About";
 import Download from "./components/Download";
 import ContactUs from "./components/Contact";
 import Footer from "./components/Footer";
-
+import { hydrate, render } from "react-dom";
 function App() {
   return (
     <BrowserRouter>
