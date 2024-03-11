@@ -67,14 +67,17 @@ const ContactForm = () => {
                 </span>
               </div>
             ) : (
-              <div></div>
+              <div className="  px-2 flex gap-x-[2rem] items-center">
+                <MdOutlinePersonOutline size={24} />
+                
+              </div>
             )}
           </div>
 
           <input
             type="text"
             required
-            className="  bg-white  bg-opacity-25  text-black text-opacity-75 py-[.90rem] h-[44px]  drop-shadow-md px-[2rem]  w-full  border rounded-md"
+            className="  bg-white  bg-opacity-25  text-black text-opacity-75  h-[44px]  drop-shadow-md px-[2.8rem] pb-[4px]  w-full  border rounded-md"
             value={FormData.name}
             name="name"
             onChange={changeHandler}
@@ -91,13 +94,16 @@ const ContactForm = () => {
                 </span>
               </div>
             ) : (
-              <div></div>
+              <div className=" px-2 flex gap-x-[2rem] items-center">
+              <RxEnvelopeClosed size={24} />
+              
+            </div>
             )}
           </div>
           <input
             type="email"
             required
-            className=" bg-white  bg-opacity-25  text-black text-opacity-75 py-[.90rem] h-[44px]  drop-shadow-md px-[2.3rem] w-full border rounded-md"
+            className=" bg-white  bg-opacity-25  text-black text-opacity-75  h-[44px]  drop-shadow-md px-[2.8rem] pb-[5px]  w-full border rounded-md"
             value={FormData.email}
             name="email"
             onChange={changeHandler}
@@ -113,13 +119,16 @@ const ContactForm = () => {
                 </span>
               </div>
             ) : (
-              <div></div>
+              <div className=" px-2 flex gap-x-[2rem] items-center">
+                <MdLocalPhone size={24} />
+                
+              </div>
             )}
           </div>
           <input
             type="tel"
             required
-            className=" bg-white  bg-opacity-25  text-black text-opacity-75 py-[.90rem] h-[44px]  drop-shadow-md px-[2.1rem] w-full border rounded-md"
+            className=" bg-white  bg-opacity-25  text-black text-opacity-75  h-[44px]  drop-shadow-md px-[2.8rem] pb-[5px] w-full border rounded-md"
             value={FormData.phoneNumber}
             name="phoneNumber"
             onChange={changeHandler}
@@ -161,7 +170,7 @@ const ContactForm = () => {
           </div>
         </div>
         <div className="mb-4 z-10 relative ">
-          <div className=" absolute top-[5%] ">
+          <div className=" absolute top-[7%] ">
             {FormData.message === "" ? (
               <div className="  px-2 flex gap-x-[2rem] items-center">
                 <MdMessage size={24} />
@@ -170,7 +179,10 @@ const ContactForm = () => {
                 </span>
               </div>
             ) : (
-              <div></div>
+              <div className="  px-2 flex gap-x-[2rem] items-center">
+                <MdMessage size={24} />
+                
+              </div>
             )}
           </div>
 
@@ -182,7 +194,7 @@ const ContactForm = () => {
             rows="9"
             cols="80"
             required
-            className=" bg-white   bg-opacity-25 text-black text-opacity-75 py-[.4rem] h-[164px]  drop-shadow-md px-[2.2rem] w-full border rounded-md"
+            className=" bg-white   bg-opacity-25 text-black text-opacity-75 py-[.5rem] h-[164px]  drop-shadow-md px-[3rem] w-full border rounded-md"
             value={FormData.message}
             name="message"
             onChange={changeHandler}
