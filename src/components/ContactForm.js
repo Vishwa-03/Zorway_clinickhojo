@@ -200,7 +200,7 @@ const ContactForm = () => {
             onChange={changeHandler}
           />
         </div>
-        <div className="mt-4 mx-auto lg:mx-0  md:mx-0 sm:mx-0  xl:mx-0   ">
+        <div className="mt-4 mx-auto lg:mx-1  md:mx-1 sm:mx-1  xl:mx-1   ">
           <button
             type="submit"
             value="Send"
