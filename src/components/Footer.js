@@ -49,8 +49,8 @@ const Footer = () => {
     // toast.success("Email sent successfully");
     
     emailjs
-    .sendForm("service_tvtn4aa", "template_gy78kvr", form2.current, {
-        publicKey: "JS_UPkJ-s6kN6yhth",
+    .sendForm("service_ehdxk82", "template_bxasuj5", form2.current, {
+        publicKey: "ppNWdc6NKBn6cYnig",
       })
     .then(
       () => {
