@@ -8,7 +8,22 @@ import { hydrate, render } from "react-dom";
 
 const rootElement = document.getElementById("root");
 if (rootElement.hasChildNodes()) {
-  hydrate(<App />, rootElement);
+  hydrate(
+    <React.StrictMode>
+      <HelmetProvider>
+        <App />
+        <Toaster
+          containerStyle={{
+            top: 20,
+            left: 20,
+            bottom: 20,
+            right: 20,
+          }}
+        />
+      </HelmetProvider>
+    </React.StrictMode>,
+    rootElement
+  );
 } else {
   render(
     <React.StrictMode>
