@@ -36,12 +36,12 @@ const ContactForm = () => {
           console.log("FAILED...", error.text);
         }
       );
-      // toast.success("Email sent successfully");
-      setTimeout(() => {
-        // Update the message after the delay
-        // setMessage('Process complete!');
-        window.location.reload();
-      }, 2000);
+    // toast.success("Email sent successfully");
+    setTimeout(() => {
+      // Update the message after the delay
+      // setMessage('Process complete!');
+      window.location.reload();
+    }, 2000);
   };
 
   const changeHandler = (event) => {
@@ -59,19 +59,16 @@ const ContactForm = () => {
       <form ref={form} className=" flex flex-col" onSubmit={sendEmail}>
         <div className="mb-4 z-10 relative ">
           <div className=" absolute  top-[23%] ">
-            {FormData.name === "" ? (
-              <div className="  px-2 flex gap-x-[2rem] items-center">
-                <MdOutlinePersonOutline size={24} />
+            <div className="  px-2 flex gap-x-[2rem] items-center">
+              <MdOutlinePersonOutline size={24} />
+              {FormData.name === "" ? (
                 <span className=" font-poppins text-[#535252] text-[12px] font-semibold">
                   Full Name
                 </span>
-              </div>
-            ) : (
-              <div className="  px-2 flex gap-x-[2rem] items-center">
-                <MdOutlinePersonOutline size={24} />
-                
-              </div>
-            )}
+              ) : (
+                <div className=""></div>
+              )}
+            </div>
           </div>
 
           <input
@@ -86,19 +83,16 @@ const ContactForm = () => {
 
         <div className="mb-4 relative">
           <div className=" absolute top-[23%]">
-            {FormData.email === "" ? (
-              <div className=" px-2 flex gap-x-[2rem] items-center">
-                <RxEnvelopeClosed size={24} />
+            <div className=" px-2 flex gap-x-[2rem] items-center">
+              <RxEnvelopeClosed size={24} />
+              {FormData.email === "" ? (
                 <span className=" font-poppins text-[#535252] text-[12px] font-semibold">
                   Email
                 </span>
-              </div>
-            ) : (
-              <div className=" px-2 flex gap-x-[2rem] items-center">
-              <RxEnvelopeClosed size={24} />
-              
+              ) : (
+                <div></div>
+              )}
             </div>
-            )}
           </div>
           <input
             type="email"
@@ -111,19 +105,16 @@ const ContactForm = () => {
         </div>
         <div className="mb-4 relative">
           <div className=" absolute top-[23%]">
-            {FormData.phoneNumber === "" ? (
-              <div className=" px-2 flex gap-x-[2rem] items-center">
-                <MdLocalPhone size={24} />
+            <div className=" px-2 flex gap-x-[2rem] items-center">
+              <MdLocalPhone size={24} />
+              {FormData.phoneNumber === "" ? (
                 <span className=" font-poppins text-[#535252] text-[12px] font-semibold">
                   Phone Number
                 </span>
-              </div>
-            ) : (
-              <div className=" px-2 flex gap-x-[2rem] items-center">
-                <MdLocalPhone size={24} />
-                
-              </div>
-            )}
+              ) : (
+                <div></div>
+              )}
+            </div>
           </div>
           <input
             type="tel"
@@ -171,19 +162,16 @@ const ContactForm = () => {
         </div>
         <div className="mb-4 z-10 relative ">
           <div className=" absolute top-[7%] ">
-            {FormData.message === "" ? (
-              <div className="  px-2 flex gap-x-[2rem] items-center">
-                <MdMessage size={24} />
+            <div className="  px-2 flex gap-x-[2rem] items-center">
+              <MdMessage size={24} />
+              {FormData.message === "" ? (
                 <span className=" font-poppins text-[#535252] text-[12px] font-semibold">
                   Write us a message{" "}
                 </span>
-              </div>
-            ) : (
-              <div className="  px-2 flex gap-x-[2rem] items-center">
-                <MdMessage size={24} />
-                
-              </div>
-            )}
+              ) : (
+                <div></div>
+              )}
+            </div>
           </div>
 
           {/* <span className="absloute top-[24%]">
