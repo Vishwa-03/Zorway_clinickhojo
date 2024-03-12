@@ -162,16 +162,16 @@ const ContactForm = () => {
         </div>
         <div className="mb-4 z-10 relative ">
           <div className=" absolute top-[7%] ">
-            <div className="  px-2 flex gap-x-[2rem] items-center">
-              <MdMessage size={24} />
-              {FormData.message === "" ? (
+            {FormData.message === "" ? (
+              <div className="  px-2 flex gap-x-[2rem] items-center">
+                <MdMessage size={24} />
                 <span className=" font-poppins text-[#535252] text-[12px] font-semibold">
                   Write us a message{" "}
                 </span>
-              ) : (
-                <div></div>
-              )}
-            </div>
+              </div>
+            ) : (
+              <div></div>
+            )}
           </div>
 
           {/* <span className="absloute top-[24%]">
